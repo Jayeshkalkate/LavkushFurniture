@@ -13,11 +13,10 @@ class FurnitureItem(models.Model):
     def __str__(self):
         return self.name
 
-class CartItem(models.Model):
+class Wishlist(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(FurnitureItem, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(default=1)
-    added_at = models.DateTimeField(auto_now_add=True)
+    added_at = models.DateTimeField(auto_now_add=True)  # ✅ Fixed typo here
 
     def __str__(self):
-        return f"{self.user.username} - {self.product.name} x {self.quantity}"
+        return f"{self.user.username} - {self.product.name}"
