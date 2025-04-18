@@ -1,0 +1,9 @@
+<h2>Your Cart</h2>
+{% for item in cart_items %}
+  <div>
+    <strong>{{ item.product.name }}</strong> - Quantity: {{ item.quantity }}
+    <a href="{% url 'remove_from_cart' item.id %}">Remove</a>
+  </div>
+{% empty %}
+  <p>Your cart is empty.</p>
+{% endfor %}

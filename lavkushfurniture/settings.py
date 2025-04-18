@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'account',
     'gallery',
     'team',
+    'cart',
     'cloudinary',
     'cloudinary_storage',
 ]

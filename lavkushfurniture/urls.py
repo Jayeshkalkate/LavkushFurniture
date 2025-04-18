@@ -17,6 +17,9 @@ urlpatterns = [
 
     # Gallery app
     path('gallery/', include('gallery.urls')),
+    
+    # Cart app
+    path('cart/', include('cart.urls')),
 
     # Other protected views
     path('aboutus/', views.aboutus, name='aboutus'),
@@ -29,7 +32,7 @@ urlpatterns = [
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
     path('our-team/', include('team.urls')),
 
-    
+    # Forgot or Reset Password
     path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
