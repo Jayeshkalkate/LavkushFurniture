@@ -26,14 +26,6 @@ def aboutus(request):
 def blog(request):
     return render(request, "blog.html")
 
-# @login_required(login_url='login')
-# def cart(request):
-#     return render(request, "cart.html")
-
-# @login_required(login_url='login')
-# def wishlist(request):
-#     return render(request, "wishlist.html")
-
 @login_required(login_url='login')
 def checkout(request):
     return render(request, "checkout.html")

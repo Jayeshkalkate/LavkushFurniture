@@ -6,8 +6,9 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+    
+    # Adminn url
     path('admin/', admin.site.urls),
-    # path('custom-admin/', admin.site.urls),
 
     # Login is handled in account.urls
     path('', views.homepage, name='homepage'),
