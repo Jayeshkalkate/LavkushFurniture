@@ -18,15 +18,15 @@ urlpatterns = [
     # Gallery app
     path('gallery/', include('gallery.urls')),
     
-    # Cart app
+    # Cart and Wishlist
     path('cart/', include('cart.urls')),
+    path('wishlist/', include('wishlist.urls')),
 
     # Other protected views
     path('aboutus/', views.aboutus, name='aboutus'),
     path('services/', views.services, name='services'),
     path('blog/', views.blog, name='blog'),
     path('contactus/', views.contact, name='contactus'),
-    path('cart/', views.cart, name='cart'),
     path('profile/', views.userprofile, name='userprofile'),
     path('ourteam/', views.ourteam, name='ourteam'),
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
