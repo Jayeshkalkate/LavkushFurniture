@@ -17,10 +17,6 @@ urlpatterns = [
 
     # Gallery app
     path('gallery/', include('gallery.urls')),
-    
-    # Cart and Wishlist
-    path('cart/', include('cart.urls')),
-    path('wishlist/', include('wishlist.urls')),
 
     # Other protected views
     path('aboutus/', views.aboutus, name='aboutus'),
